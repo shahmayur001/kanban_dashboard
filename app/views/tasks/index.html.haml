@@ -7,7 +7,7 @@
   %tbody
     %tr
       -@statuses.each do |status|
-        %td{ class: status.name.gsub(/\s/, '-') }
+        %td{ class: status.name.gsub(/\s/, '-'), id: status.id }
 
 #rawKanbanTasks.d-none
   = @tasks.map do |t|

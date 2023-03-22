@@ -6,3 +6,12 @@ development:
   username: <%= ENV['LOCAL_DB_USR'] %>
   password: <%= ENV['LOCAL_DB_PWD'] %>
   database: kanban_dashboard
+
+test:
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  adapter: mysql2
+  reconect: true
+  host: '127.0.0.1'
+  username: <%= ENV['LOCAL_DB_USR'] %>
+  password: <%= ENV['LOCAL_DB_PWD'] %>
+  database: kanban_dashboard_test
